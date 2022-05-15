@@ -8,13 +8,43 @@
 //%color=#ff8800 block="中学学習"
 
 namespace Custom {
+
     /**
-     * TODO: describe your function here
-     * @param n describe parameter here, eg: 2
-     * @param m describe parameter here, eg: 3
-     * @param e describe parameter here
-     */
-    //% block="前 Line       調整 $n "
+    * TODO: describe your function here
+    * @param m describe parameter here, eg: 3
+    */
+    //%block="左折　　回転角 $m "
+    export function fo3(m: number): void {
+        cuteBot.motors(-30, 30);
+        basic.pause(100 * m);
+        cuteBot.stopcar()
+        basic.pause(200);
+    }
+
+    /**
+    * TODO: describe your function here
+    * @param l describe parameter here, eg: 3
+    */
+    //%block="右折　　回転角 $l "
+    export function fo7(l: number): void {
+        cuteBot.motors(30, -30);
+        basic.pause(300);
+        cuteBot.stopcar()
+        basic.pause(200);
+    }
+
+    //%block="止まる"
+    export function fo4(): void {
+        cuteBot.stopcar()
+    }
+
+    /**
+ * TODO: describe your function here
+ * @param n describe parameter here, eg: 2
+ * @param m describe parameter here, eg: 3
+ * @param e describe parameter here
+ */
+    //% block="前進 Line      調整 $n "
     export function foo(n: number): void {
         let paw = 0
         if (cuteBot.tracking(cuteBot.TrackingState.L_R_unline)) {
@@ -51,16 +81,13 @@ namespace Custom {
     }
     /**
     * TODO: describe your function here
-    * @param m describe parameter here, eg: 3
+    * @param k describe parameter here, eg: 3
     */
-    //%block="左折　　回転角 $m "
-    export function fo3(m: number): void {
-        cuteBot.motors(-30, 30);
-        basic.pause(100 * m);
+    //%block="前進    距離 $k　調整 $i"
+    export function foo5(k: number, i: number): void {
+        cuteBot.motors(20, 20 + i);
+        basic.pause(100 * k);
         cuteBot.stopcar()
-        basic.pause(100);
     }
-
-
 
 }
