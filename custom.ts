@@ -14,7 +14,7 @@ namespace Custom {
     * @param m describe parameter here, eg: 3
     */
     //%block="左折　　回転角 $m "
-    export function fo3(m: number): void {
+    export function turn_L(m: number): void {
         cuteBot.motors(-30, 30);
         basic.pause(100 * m);
         cuteBot.stopcar()
@@ -26,7 +26,7 @@ namespace Custom {
     * @param l describe parameter here, eg: 3
     */
     //%block="右折　　回転角 $l "
-    export function fo7(l: number): void {
+    export function Turn_R(l: number): void {
         cuteBot.motors(30, -30);
         basic.pause(300);
         cuteBot.stopcar()
@@ -34,7 +34,7 @@ namespace Custom {
     }
 
     //%block="止まる"
-    export function fo4(): void {
+    export function Stop_c(): void {
         cuteBot.stopcar()
     }
 
@@ -45,7 +45,7 @@ namespace Custom {
  * @param e describe parameter here
  */
     //% block="前進 Line      調整 $n "
-    export function foo(n: number): void {
+    export function Forward_line(n: number): void {
         let paw = 0
         if (cuteBot.tracking(cuteBot.TrackingState.L_R_unline)) {
             while (cuteBot.tracking(cuteBot.TrackingState.L_R_unline)) {
@@ -84,7 +84,7 @@ namespace Custom {
     * @param k describe parameter here, eg: 3
     */
     //%block="前進    距離 $k　調整 $i"
-    export function foo5(k: number, i: number): void {
+    export function Forward_dis(k: number, i: number): void {
         cuteBot.motors(20, 20 + i);
         basic.pause(100 * k);
         cuteBot.stopcar()
