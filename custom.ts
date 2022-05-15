@@ -49,15 +49,18 @@ namespace Custom {
         }
 
     }
-    
-        //%block="左折　　　$m "
-        export function fo3(m: number): void {
-            cuteBot.motors(-30, 30);
-            basic.pause(300 * m);
-            cuteBot.stopcar()
-            basic.pause(500);
-        }
-        
+    /**
+    * TODO: describe your function here
+    * @param m describe parameter here, eg: 3
+    */
+    //%block="左折　　回転角 $m "
+    export function fo3(m: number): void {
+        cuteBot.motors(-30, 30);
+        basic.pause(100 * m);
+        cuteBot.stopcar()
+        basic.pause(100);
+    }
 
 
- }
+
+}
