@@ -28,7 +28,7 @@ namespace Custom {
     //%block="右折　　回転角 $l "
     export function Turn_R(l: number): void {
         cuteBot.motors(30, -30);
-        basic.pause(100 * l);
+        basic.pause(300);
         cuteBot.stopcar()
         basic.pause(200);
     }
