@@ -79,12 +79,24 @@ namespace Custom {
         }
 
     }
+
+    /**
+    * TODO: describe your function here
+    * @param o describe parameter here, eg: 3
+    */
+    //%block="後退    距離 $o　調整 $p"
+    export function Back_dis(o: number, p: number): void {
+        cuteBot.motors(-20, -20 + p);
+        basic.pause(100 * o);
+        cuteBot.stopcar()
+    }
+
     /**
     * TODO: describe your function here
     * @param k describe parameter here, eg: 3
     */
     //%block="前進    距離 $k　調整 $i"
-    export function Forward_dis(k: number, i: number): void {
+    export function Forwar_dis(k: number, i: number): void {
         cuteBot.motors(20, 20 + i);
         basic.pause(100 * k);
         cuteBot.stopcar()
